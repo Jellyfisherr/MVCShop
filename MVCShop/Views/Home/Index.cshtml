@@ -1,0 +1,23 @@
+﻿@model IEnumerable<MVCShop.Models.IndexViewModel>
+
+@{
+    //IndexViewModel indexViewModel = ViewResult;
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    
+    <table>
+        <thead><td>ID</td><td>Name</td><td>Category</td><td>Brand</td></thead>
+    <tbody>
+      @foreach (var item in Model)
+      {
+          <tr><td>@item.Id</td><td>@item.Name</td><td>@item.Category</td><td>@item.Brand</td></tr>
+      }        
+
+    </tbody>   
+
+    </table>
+</div>
